@@ -2,7 +2,7 @@ const express = require("express");
 const homeroute = require("./routes/index.js");
 const techroute = require("./routes/tech.js");
 const app = express();
-const PORT = 3000;
+const PORT =  process.env.PORT||3000;
 
 app.use("/", homeroute)
 app.use("/ttech", techroute)
